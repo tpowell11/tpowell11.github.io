@@ -24,6 +24,7 @@ body {
 .title {
     font-size: 200%;
     padding-right: 2%;
+    padding-left: 2%;
     margin: 0%;
     display: inline-block;
 }
@@ -45,6 +46,16 @@ body {
 /*elements in the page contents*/
 .content {
     grid-area: content;
+}
+.featured-article {
+    background-color: coral;
+    margin: 1%;
+    width: 33%;
+    align-items: center;
+    justify-content: center;
+}
+img {
+    width: 12.5%;
 }
 .footer {
     grid-area: footer;
