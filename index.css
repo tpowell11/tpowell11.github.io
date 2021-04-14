@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+:root {
+    --background: #313131;
+    --text: #ffffff;
+}
+body {
+    font-family: 'Open Sans',sans-serif;
+    color: var(--text);
+    background-color: var(--background);
+}
+
+.wrapper {
+    display: grid;
+    grid-template-areas: 
+    "topbar topbar topbar"
+    "content content content"
+    "footer footer footer";
+}
+/*elements in the header*/
+.header {
+    grid-area: topbar;
+    border-style: none none solid none;
+}
+.title {
+    font-size: 200%;
+    padding-right: 2%;
+    margin: 0%;
+    display: inline-block;
+}
+.bar-button {
+    display: inline-block;
+    padding: 1%;
+    background-color: chartreuse;
+    text-decoration: none;
+    color: var(--text);
+}
+.bar-button:hover {
+    background-color: coral;
+    text-decoration: none;
+}
+.bar-button:visited{
+    color: var(--text);
+    text-decoration: none;
+}
+/*elements in the page contents*/
+.content {
+    grid-area: content;
+}
+.footer {
+    grid-area: footer;
+    border-style: solid none none none;
+}
