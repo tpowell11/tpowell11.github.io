@@ -50,9 +50,9 @@ body {
     grid-area: content;
     display: grid;
     grid-template-areas: 
-    "feature feature feature"
-    "feature feature feature"
-    "feature feature feature";
+    "feature feature feature feature"
+    "feature feature feature feature"
+    "feature feature feature feature";
 }
 .featured-article {
     
