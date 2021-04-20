@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 :root {
-    --background: #313131;
-    --button-accent: #505050;
-    --hover-accent: #0646a5;
+    --background: #001F3D;
+    --button-accent: #003569;
+    --hover-accent: #003569;
     --text: #ffffff;
+    --block-background: #E87A00;
 }
 body {
     font-family: 'Open Sans',sans-serif;
@@ -55,8 +56,7 @@ body {
     "feature feature feature feature";
 }
 .featured-article {
-    
-    background-color: coral;
+    background-color: var(--block-background);
     margin: 1%;
     align-items: center;
     justify-content: center;
