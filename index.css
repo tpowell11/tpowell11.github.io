@@ -1,12 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+/*the outfit family of fonts is (c) Rodrigo Fuenzalida, under the Open Font License*/
+@font-face {
+    font-family: "outfit-regular";
+    src: url("assets/Outfit-Regular.otf");
+}
+@font-face {
+    font-family: "outfit-bold";
+    src: url("assets/Outfit-Bold.otf");
+}
+@font-face {
+    font-family: "outfit-black";
+    src: url("assets/Outfit-Black.otf");
+}
 :root {
-    --background: #313131;
-    --button-accent: #505050;
-    --hover-accent: #0646a5;
+    --background: #4F6D7A;
+    --button-accent: #56A3A6;
+    --hover-accent: #084C61;
     --text: #ffffff;
+    --accenta: #DB504A;
+    --accentb: #E3B505;
+    --accentc: #CACAAA;
 }
 body {
-    font-family: 'Open Sans',sans-serif;
+    /*font-family: 'Open Sans',sans-serif;*/
+    font-family: "outfit-regular";
     color: var(--text);
     background-color: var(--background);
 }
@@ -24,11 +41,13 @@ body {
     border-style: none none solid none;
 }
 .title {
+    font-family: "outfit-black";
     font-size: 200%;
     padding-right: 2%;
     padding-left: 2%;
     margin: 0%;
     display: inline-block;
+    align-self: center;
 }
 .bar-button {
     display: inline-block;
@@ -45,38 +64,55 @@ body {
     color: var(--text);
     text-decoration: none;
 }
-/*elements in the page contents*/
+/* Hompage classes*/
 .content {
-    grid-area: content;
     display: grid;
-    grid-template-areas: 
-    "feature feature feature"
-    "feature feature feature"
-    "feature feature feature";
+    grid-gap: 2em; /* [1] Add some gap between rows and columns */
+    grid-template-columns: repeat( auto-fill, minmax( 200px, 1fr ) ); /* [2] Make columns adjust according to the available viewport */
+    grid-auto-rows: 250px; /* [3] Set the height for implicitly-created row track */
+}
+.col--2x {
+    grid-row-end: span 2;
+}
+.col--3x {
+    grid-row-end: span 3;
 }
 .featured-article {
-    
-    background-color: coral;
+    border: .5em;
+    border-style: solid;
+    border-color: var(--accentc);
+    background-color: var(--accenta);
     margin: 1%;
     align-items: center;
     justify-content: center;
-    border-radius: 1em;
+    /*border-radius: 1em;*/
+}
+.featuretext {
+    padding: 0% 5% 5% 5%;
+    margin: 0px 0px 0px 0px;
+    font-family: "outfit-regular";
+}
+.featuretitle{
+    font-family: "outfit-bold";
+    font-weight: 600;
+    font-size: 200%;
+    padding-left: 1%;
+    padding-top: 1%;
+    margin-bottom: 0px;
+    margin-top: 0px;
 }
 .overlay {
     color:var(--text);
     text-decoration: none;
     
 }
-
-.featuretext {
-    padding: 0% 1% 1% 1%;
-}
-img {
+/* .fpimage {
     width: 50%;
     display: block;
     margin-left: auto;
     margin-right: auto;
-}
+    padding-top: em;
+} */
 .footer {
     grid-area: footer;
     border-style: solid none none none;
